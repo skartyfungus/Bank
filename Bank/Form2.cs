@@ -11,23 +11,25 @@ using System.Windows.Forms;
 
 namespace Bank
 {
-    public partial class Form2 : Form
+    public partial class loginForm : Form
     {
 
 
         int currUserId;
-        public Form2()
+        public loginForm()
         {
             InitializeComponent();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+
             if (DBAPI.Login(usernameInput.Text, passwordInput.Text))
             {
-                Form3 form3 = new Form3();
-                form3.Show();
+                dashboardForm dashboard = new dashboardForm();
+                Debug.WriteLine(usernameInput.Text);
+                dashboard.Show();
+
                 this.Hide();
 
             }
@@ -41,21 +43,27 @@ namespace Bank
 
         private void registerPageButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            registerAccountForm register = new registerAccountForm();
+            register.Show();
             this.Hide();
 
 
         }
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form1 form1 = new Form1();
-            Form3 form3 = new Form3();
-            if (!form1.Visible && !form3.Visible)
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
             {
-                Application.Exit();
+                passwordInput.UseSystemPasswordChar = false;
             }
-            
+            else
+            {
+                passwordInput.UseSystemPasswordChar = true;
+            }
         }
     }
 

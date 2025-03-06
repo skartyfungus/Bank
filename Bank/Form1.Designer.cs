@@ -1,6 +1,6 @@
 ﻿namespace Bank
 {
-    partial class Form1
+    partial class registerAccountForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,13 +34,15 @@
             usernameLabel = new Label();
             passwordLabel = new Label();
             loginPageButton = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // registerButton
             // 
-            registerButton.Location = new Point(337, 327);
+            registerButton.Location = new Point(405, 283);
+            registerButton.Margin = new Padding(3, 4, 3, 4);
             registerButton.Name = "registerButton";
-            registerButton.Size = new Size(75, 23);
+            registerButton.Size = new Size(189, 31);
             registerButton.TabIndex = 0;
             registerButton.Text = "Register";
             registerButton.UseVisualStyleBackColor = true;
@@ -48,60 +50,78 @@
             // 
             // usernameInput
             // 
-            usernameInput.Location = new Point(231, 258);
+            usernameInput.CharacterCasing = CharacterCasing.Lower;
+            usernameInput.Location = new Point(284, 191);
+            usernameInput.Margin = new Padding(3, 4, 3, 4);
             usernameInput.Name = "usernameInput";
-            usernameInput.Size = new Size(100, 23);
+            usernameInput.Size = new Size(114, 27);
             usernameInput.TabIndex = 1;
             // 
             // passwordInput
             // 
-            passwordInput.Location = new Point(231, 327);
+            passwordInput.Location = new Point(284, 283);
+            passwordInput.Margin = new Padding(3, 4, 3, 4);
             passwordInput.Name = "passwordInput";
-            passwordInput.PasswordChar = '*';
-            passwordInput.Size = new Size(100, 23);
+            passwordInput.Size = new Size(114, 27);
             passwordInput.TabIndex = 2;
+            passwordInput.UseSystemPasswordChar = true;
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Location = new Point(231, 240);
+            usernameLabel.Location = new Point(284, 167);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(60, 15);
+            usernameLabel.Size = new Size(75, 20);
             usernameLabel.TabIndex = 3;
             usernameLabel.Text = "Username";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(231, 309);
+            passwordLabel.Location = new Point(284, 259);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(57, 15);
+            passwordLabel.Size = new Size(70, 20);
             passwordLabel.TabIndex = 4;
             passwordLabel.Text = "Password";
             // 
             // loginPageButton
             // 
-            loginPageButton.Location = new Point(337, 395);
+            loginPageButton.Location = new Point(405, 374);
+            loginPageButton.Margin = new Padding(3, 4, 3, 4);
             loginPageButton.Name = "loginPageButton";
-            loginPageButton.Size = new Size(75, 23);
+            loginPageButton.Size = new Size(189, 31);
             loginPageButton.TabIndex = 5;
             loginPageButton.Text = "Go to login";
             loginPageButton.UseVisualStyleBackColor = true;
             loginPageButton.Click += loginPageButton_Click;
             // 
-            // Form1
+            // checkBox1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(284, 317);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(105, 24);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Show/Hide";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // registerAccountForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(checkBox1);
             Controls.Add(loginPageButton);
             Controls.Add(passwordLabel);
             Controls.Add(usernameLabel);
             Controls.Add(passwordInput);
             Controls.Add(usernameInput);
             Controls.Add(registerButton);
-            Name = "Form1";
-            Text = "Form1";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "registerAccountForm";
+            Text = "Register Account";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,5 +134,6 @@
         private Label usernameLabel;
         private Label passwordLabel;
         private Button loginPageButton;
+        private CheckBox checkBox1;
     }
 }

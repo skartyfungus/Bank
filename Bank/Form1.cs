@@ -2,15 +2,21 @@ using System.Diagnostics;
 
 namespace Bank
 {
-    public partial class Form1 : Form
+    public partial class registerAccountForm : Form
     {
-        public Form1()
+        public registerAccountForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (usernameInput.Text == "" || passwordInput.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DBAPI.Register(usernameInput.Text, passwordInput.Text);
             usernameInput.Text = "";
             passwordInput.Text = "";
@@ -23,19 +29,31 @@ namespace Bank
 
         private void loginPageButton_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            loginForm login = new loginForm();
             this.Hide();
-            form2.Show();
+            login.Show();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form2 form2 = new Form2();
-            Form3 form3 = new Form3();
-            if (!form2.Visible && !form3.Visible)
-            {
-                Application.Exit();
-            }
 
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                passwordInput.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordInput.UseSystemPasswordChar = true;
+            }
         }
     }
 }

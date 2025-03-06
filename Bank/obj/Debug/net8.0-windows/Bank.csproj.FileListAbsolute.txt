@@ -120,9 +120,6 @@ C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\bin\Debug\net8.0-windows\
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.csproj.AssemblyReference.cache
-C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.Form1.resources
-C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.Form2.resources
-C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.Form3.resources
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.csproj.GenerateResource.cache
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.AssemblyInfoInputs.cache
@@ -135,3 +132,8 @@ C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.pdb
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.genruntimeconfig.cache
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\ref\Bank.dll
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.AdminPage.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.registerAccountForm.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.loginForm.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.dashboardForm.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.AccountControl.resources

@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Bank;
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bank
 {
@@ -16,11 +20,11 @@ namespace Bank
         string username;
         public SendMoney()
         {
-            
+
             InitializeComponent();
             listBox1.Items.AddRange(DBAPI.GetAllUsernames().ToArray());
 
-            foreach(string user in listBox1.Items)
+            foreach (string user in listBox1.Items)
             {
                 if (user == DBAPI.GetUserInfo(DBAPI.CurrentUserId, null) || user == "admin")
                 {
@@ -38,46 +42,44 @@ namespace Bank
             usernameLabel.Text = username;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private async void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            await SearchUsersAsync(textBox2.Text);
+        }
+
+        private async Task SearchUsersAsync(string searchQuery)
+        {
+            searchQuery = searchQuery.ToLower(); // Convert input to lowercase for case-insensitive search
+            listBox1.Items.Clear();
+
+            List<string> allUsers = await Task.Run(() =>
             {
-                listBox1.Items.AddRange(DBAPI.GetAllUsernames().ToArray());
-                return;
-            }
-            else
-            {
-                try
-                {
-                    int searchedId = int.Parse(textBox2.Text);
-                    foreach (string user in listBox1.Items)
-                    {
-                        //search for users
-                        if (user == "admin" || user == DBAPI.GetUserInfo(DBAPI.CurrentUserId, null))
-                        {
-                            listBox1.Items.Remove(user);
-                            continue;
-                        }
-                        if(!DBAPI.GetUserInfo(null, user).ToString().Contains(searchedId.ToString()))
-                        {
-                            listBox1.Items.Remove(user);
-                            continue;
-                        }
-                    }
-                }
-                catch
-                {
-                    foreach (string user in listBox1.Items)
-                    {
-                        //search for users
-                        if (!user.Contains(textBox2.Text) || user == "admin" || user == DBAPI.GetUserInfo(DBAPI.CurrentUserId, null))
-                        {
-                            listBox1.Items.Remove(user);
-                            continue;
-                        }
-                    }
-                }
-            }
+                return DBAPI.GetAllUsernames()
+                    .Where(user => user != "admin" && user != DBAPI.GetUserInfo(DBAPI.CurrentUserId, null)) // Exclude admin & current user
+                    .Where(user =>
+                            user.ToLower().Contains(searchQuery) ||
+                            DBAPI.GetUserInfo(null, user).ToLower().Contains(searchQuery) // Search by username or user ID
+                    )
+                    .ToList();
+            });
+
+            listBox1.Items.AddRange(allUsers.ToArray());
+        }
+
+        private void balanceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            dashboardForm dash = new();
+            dash.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

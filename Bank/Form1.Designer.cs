@@ -39,6 +39,7 @@
             // 
             // registerButton
             // 
+            registerButton.FlatStyle = FlatStyle.Popup;
             registerButton.Location = new Point(405, 283);
             registerButton.Margin = new Padding(3, 4, 3, 4);
             registerButton.Name = "registerButton";
@@ -119,7 +120,9 @@
             Controls.Add(usernameInput);
             Controls.Add(registerButton);
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "registerAccountForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Register Account";
             Load += Form1_Load;
             ResumeLayout(false);

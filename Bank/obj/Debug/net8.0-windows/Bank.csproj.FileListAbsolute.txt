@@ -137,3 +137,5 @@ C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.loginForm.resources
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.dashboardForm.resources
 C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.AccountControl.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.Properties.Resources.resources
+C:\Users\elliot.knochenhauer\Desktop\Projekt\Bank\Bank\obj\Debug\net8.0-windows\Bank.SendMoney.resources

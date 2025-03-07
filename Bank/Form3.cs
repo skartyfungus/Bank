@@ -19,7 +19,7 @@ namespace Bank
 
             InitializeComponent();
             currUserIdLabel.Text = DBAPI.CurrentUserId.ToString();
-            balanceLabel.Text = DBAPI.GetUserBalance(DBAPI.CurrentUserId, null).ToString() + " R$";
+            balanceLabel.Text = "$" + DBAPI.GetUserBalance(DBAPI.CurrentUserId, null).ToString() + " RZD";
 
             if (DBAPI.CurrentUserId == -1)
             {
@@ -94,7 +94,7 @@ namespace Bank
             {
                 decimal depositAmount = Convert.ToDecimal(Interaction.InputBox("How much do you wish to deposit?", "Deposit", "Enter amount:"));
                 DBAPI.AlterBalance(DBAPI.CurrentUserId, null, depositAmount);
-                balanceLabel.Text = DBAPI.GetUserBalance(DBAPI.CurrentUserId, null).ToString() + " R$";
+                balanceLabel.Text = "$" + DBAPI.GetUserBalance(DBAPI.CurrentUserId, null).ToString() + " $RZD";
             }
             catch
             {

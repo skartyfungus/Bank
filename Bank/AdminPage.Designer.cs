@@ -171,7 +171,9 @@
             Controls.Add(listBox1);
             Controls.Add(button2);
             Controls.Add(button1);
+            MaximizeBox = false;
             Name = "AdminPage";
+            SizeGripStyle = SizeGripStyle.Show;
             Text = "AdminPage";
             ResumeLayout(false);
             PerformLayout();

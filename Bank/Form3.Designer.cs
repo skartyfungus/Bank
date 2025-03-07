@@ -39,6 +39,8 @@
             balanceLabel = new Label();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             SuspendLayout();
             // 
             // currUserIdLabel
@@ -130,7 +132,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(365, 296);
+            button2.Location = new Point(305, 296);
             button2.Name = "button2";
             button2.Size = new Size(276, 61);
             button2.TabIndex = 9;
@@ -140,18 +142,38 @@
             // 
             // button3
             // 
-            button3.Location = new Point(365, 364);
+            button3.Location = new Point(305, 364);
             button3.Name = "button3";
             button3.Size = new Size(276, 61);
             button3.TabIndex = 10;
             button3.Text = "Withdraw";
             button3.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            button4.Location = new Point(587, 364);
+            button4.Name = "button4";
+            button4.Size = new Size(276, 61);
+            button4.TabIndex = 12;
+            button4.Text = "View transaction history";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(587, 296);
+            button5.Name = "button5";
+            button5.Size = new Size(276, 61);
+            button5.TabIndex = 11;
+            button5.Text = "Send Money";
+            button5.UseVisualStyleBackColor = true;
+            // 
             // dashboardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(button4);
+            Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(balanceLabel);
@@ -164,7 +186,9 @@
             Controls.Add(logoutButton);
             Controls.Add(currUserIdLabel);
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "dashboardForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Dashboard";
             Load += dashboardForm_Load;
             ResumeLayout(false);
@@ -184,5 +208,7 @@
         private Label balanceLabel;
         private Button button2;
         private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }

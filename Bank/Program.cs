@@ -34,8 +34,11 @@ namespace Bank
         {
             ApplicationConfiguration.Initialize();
 
-            loginForm login = new loginForm();
-            login.Show(); // Show the login form first
+            //loginForm login = new loginForm();
+            //login.Show(); // Show the login form first
+            SendMoney sendMoney = new SendMoney();
+            sendMoney.Show();
+
 
             Task.Run(() => MonitorForms()); // Start the form monitoring task
 

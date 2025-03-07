@@ -119,7 +119,9 @@
             Controls.Add(usernameInput);
             Controls.Add(loginButton);
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "loginForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Log In";
             ResumeLayout(false);
             PerformLayout();

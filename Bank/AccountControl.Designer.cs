@@ -205,7 +205,9 @@
             Controls.Add(checkBox1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            MaximizeBox = false;
             Name = "AccountControl";
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Account Control";
             ResumeLayout(false);
             PerformLayout();
